@@ -1,23 +1,28 @@
 # Examen práctico take-home – Junior Full Stack
 
 ## Duración
+
 3 a 4 horas
 
 ## Tecnologías
+
 - NestJS
 - React
 - MySQL
 - Git
 
 ## Nivel esperado
+
 Junior full-stack. No se requiere experiencia avanzada en NestJS, Docker ni despliegue. El objetivo es evaluar la capacidad para construir una solución funcional, ordenada y documentada.
 
 ---
 
 ## Objetivo
+
 Desarrollar una aplicación web para gestionar un catálogo de productos de una tienda.
 
 La solución debe incluir:
+
 - Backend en NestJS
 - Frontend en React
 - Base de datos MySQL
@@ -28,6 +33,7 @@ La solución debe incluir:
 ---
 
 ## Caso de uso
+
 Una pequeña tienda necesita administrar su inventario de productos. La aplicación debe permitir:
 
 - Ver la lista de productos
@@ -41,6 +47,7 @@ Una pequeña tienda necesita administrar su inventario de productos. La aplicaci
 ---
 
 ## Requisitos funcionales
+
 La aplicación debe permitir lo siguiente:
 
 1. Registrar productos con los campos mínimos requeridos.
@@ -59,7 +66,9 @@ La aplicación debe permitir lo siguiente:
 ---
 
 ## Entregable
+
 Debe entregar un repositorio funcional con:
+
 - backend
 - frontend
 - base de datos local configurada con MySQL
@@ -71,6 +80,7 @@ Debe entregar un repositorio funcional con:
 ## Requisitos obligatorios
 
 ### Backend
+
 - Crear un proyecto NestJS.
 - Conectar a MySQL.
 - Crear al menos estas entidades:
@@ -83,6 +93,7 @@ Debe entregar un repositorio funcional con:
 - Permitir búsqueda y filtro por categoría.
 
 ### Frontend
+
 - Crear una interfaz en React para:
   - listar productos
   - agregar producto
@@ -94,16 +105,19 @@ Debe entregar un repositorio funcional con:
 - Validar formularios del lado del cliente.
 
 ### Base de datos
+
 - Usar MySQL local.
 - Configurar credenciales mediante variables de entorno.
 - Crear esquema con migración o script inicial.
 
 ### Git
+
 - Tener un repositorio Git.
 - Realizar commits con mensajes claros.
 - Mantener un historial limpio y legible.
 
 ### Documentación
+
 - Incluir README con:
   - descripción del proyecto
   - instalación
@@ -115,6 +129,7 @@ Debe entregar un repositorio funcional con:
 ---
 
 ## Requisitos opcionales
+
 Estos no son obligatorios, pero suman valor:
 
 - Paginación
@@ -131,12 +146,14 @@ Estos no son obligatorios, pero suman valor:
 ## Modelo de datos sugerido
 
 ### Tabla: categories
+
 - id: bigint/int, PK, autoincremental
 - name: varchar(100), obligatorio, único
 - createdAt: datetime
 - updatedAt: datetime
 
 ### Tabla: products
+
 - id: bigint/int, PK, autoincremental
 - name: varchar(150), obligatorio
 - sku: varchar(100), obligatorio, único
@@ -155,6 +172,7 @@ Estos no son obligatorios, pero suman valor:
 ## Endpoints sugeridos
 
 ### Categorías
+
 - GET /categories
 - GET /categories/:id
 - POST /categories
@@ -162,6 +180,7 @@ Estos no son obligatorios, pero suman valor:
 - DELETE /categories/:id
 
 ### Productos
+
 - GET /products
 - GET /products/:id
 - GET /products?search=...&categoryId=...
@@ -170,7 +189,9 @@ Estos no son obligatorios, pero suman valor:
 - DELETE /products/:id
 
 ### Ejemplo de payload
+
 Crear producto:
+
 ```json
 {
   "name": "Laptop Lenovo",
@@ -183,6 +204,7 @@ Crear producto:
 ```
 
 Actualizar producto:
+
 ```json
 {
   "price": 949.99,
@@ -193,6 +215,7 @@ Actualizar producto:
 ---
 
 ## Criterios de aceptación
+
 La solución será considerada correcta si:
 
 - El backend funciona y se conecta a MySQL.
@@ -211,12 +234,14 @@ La solución será considerada correcta si:
 ## Instrucciones de ejecución
 
 ### Requisitos mínimos
+
 - Node.js 18+
 - npm o yarn
 - MySQL 8
 - Git
 
 ### Pasos recomendados
+
 1. Clonar repositorio
 2. Crear base de datos
 3. Configurar variables de entorno
@@ -228,6 +253,7 @@ La solución será considerada correcta si:
 9. Probar las rutas principales
 
 ### Ejemplo de comandos
+
 ```bash
 npm install
 npm run start:dev
@@ -240,7 +266,9 @@ npm run dev
 ---
 
 ## Evaluación
+
 La prueba se evaluará principalmente en:
+
 - funcionalidad
 - calidad del código
 - validaciones
@@ -250,11 +278,3 @@ La prueba se evaluará principalmente en:
 - uso de Git
 
 ---
-
-## Versión corta para enviar al candidato
-> Crear una aplicación full-stack para gestionar un catálogo de productos de una tienda. El backend debe estar desarrollado en NestJS, conectarse a MySQL y exponer un CRUD para productos y categorías. El frontend debe estar desarrollado en React y consumir la API para listar, crear, editar y eliminar productos. Debe incluir validaciones, manejo de errores, búsqueda por nombre/SKU y una interfaz simple. Debe entregarse con Git y un README con instrucciones para ejecutar el proyecto. La prueba tiene una duración de 3 a 4 horas y no requiere conocimientos avanzados de NestJS, Docker ni despliegue.
-
----
-
-## Contacto del evaluador
-Si necesitas presentar esta prueba a un candidato, puedes usar este documento tal cual o adaptarlo al tono de la empresa.
